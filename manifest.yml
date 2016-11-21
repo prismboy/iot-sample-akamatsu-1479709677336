@@ -1,0 +1,12 @@
+applications:
+- path: .
+  memory: 512M
+  instances: 1
+  domain: mybluemix.net
+  name: iot-sample-akamatsu
+  host: iot-sample-akamatsu
+  disk_quota: 1024M
+  services:
+  - iot-sample-akamatsu-cloudantNoSQLDB
+  - iot-sample-akamatsu-iotf-service
+  command: node --max-old-space-size=384 node_modules/node-red/red.js --settings ./bluemix-settings.js -v
