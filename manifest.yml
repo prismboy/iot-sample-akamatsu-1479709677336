@@ -1,8 +1,8 @@
 declared-services:
-  iot-sample-akamatsu-cloudantNoSQLDB
+  iot-sample-akamatsu-cloudantNoSQLDB:
     label: cloudantNoSQLDB
     plan: Lite
-  iot-sample-akamatsu-iotf-service
+  iot-sample-akamatsu-iotf-service:
     label: iotf-service
     plan: iotf-service-standard
 applications:
