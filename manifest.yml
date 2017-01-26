@@ -2,5 +2,9 @@ applications:
 - path: .
   memory: 512M
   instances: 1
+  name: iot-sample
+  host: iot-sample
   disk_quota: 1024M
   services:
+  - iot-sample-cloudantNoSQLDB
+  - iot-sample-iotf-service
