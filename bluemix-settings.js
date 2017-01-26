@@ -24,7 +24,7 @@ var VCAP_APPLICATION = JSON.parse(process.env.VCAP_APPLICATION);
 var VCAP_SERVICES = JSON.parse(process.env.VCAP_SERVICES);
 
 var settings = module.exports = {
-    uiPort: process.env.VCAP_APP_PORT || 1880,
+    uiPort: process.env.PORT || 1880,
     mqttReconnectTime: 15000,
     serialReconnectTime: 15000,
     debugMaxLength: 1000,
@@ -45,6 +45,8 @@ var settings = module.exports = {
     // You can protect the user interface with a userid and password by using the following property
     // the password must be an md5 hash  eg.. 5f4dcc3b5aa765d61d8327deb882cf99 ('password')
     //httpAdminAuth: {user:"user",pass:"5f4dcc3b5aa765d61d8327deb882cf99"},
+    
+    requireHttps: true,
 
     // Serve up the welcome page
     httpStatic: path.join(__dirname,"public"),
